@@ -27,7 +27,6 @@ const app = createApp({
     },
 
     deleteTask(index) {
-      const deleteTask = this.todoList[index];
       this.todoList.splice(index, 1);
     },
   },
