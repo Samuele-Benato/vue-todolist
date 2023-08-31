@@ -1,0 +1,9 @@
+.clearfix {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.strikethrough-text {
+  text-decoration: line-through;
+}
