@@ -18,6 +18,7 @@ const app = createApp({
           done: false,
         },
       ],
+      newThingToDo: "",
     };
   },
 
@@ -28,6 +29,12 @@ const app = createApp({
 
     deleteTask(index) {
       this.todoList.splice(index, 1);
+    },
+
+    addNewThingToDo() {
+      this.todoList.unshift(this.newThingToDo);
+
+      this.newThingToDo = "";
     },
   },
 }).mount("#app");
