@@ -60,22 +60,17 @@
           </button>
         </div>
         <div class="todoContainer">
-          <div class="card mb-3">
-            <div @click="strikethroughText()" class="card-body clearfix">
-              {{todoList[0].text}}
-              <i class="fa-solid fa-trash float-end"></i>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-body clearfix">
-              {{todoList[1].text}}
-              <i class="fa-solid fa-trash float-end"></i>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-body clearfix">
-              {{todoList[2].text}}
-              <i class="fa-solid fa-trash float-end"></i>
+          <div v-for="(thingToDo,index) in todoList" class="card mb-3">
+            <div
+              @click="done(index)"
+              class="card-body clearfix"
+              :class="thingToDo.done ? 'strikethrough-text' : '' "
+            >
+              {{thingToDo.text}}
+              <i
+                @click="deleteTask(index)"
+                class="fa-solid fa-trash float-end"
+              ></i>
             </div>
           </div>
         </div>

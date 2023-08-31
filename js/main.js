@@ -22,11 +22,13 @@ const app = createApp({
   },
 
   methods: {
-    strikethroughText() {
-      this.done == true;
-      if (this.done == true) {
-        this.todoList[thingToDo].text.classList.add("strikethrough-text");
-      }
+    done(index) {
+      this.todoList[index].done = true;
+    },
+
+    deleteTask(index) {
+      const deleteTask = this.todoList[index];
+      this.todoList.splice(index, 1);
     },
   },
 }).mount("#app");
