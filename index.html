@@ -46,6 +46,7 @@
         <div class="input-group mb-3">
           <input
             v-model.trim="newThingToDo.text"
+            @keyUp.enter="addNewThingToDo()"
             type="text"
             class="form-control"
             placeholder="Aggiungi una cosa da fare"
