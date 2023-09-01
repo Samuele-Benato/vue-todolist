@@ -35,8 +35,8 @@ const app = createApp({
     },
 
     addNewThingToDo() {
-      const newThingToDo = { ...this.newThingToDo };
-      this.todoList.unshift(newThingToDo);
+      const newThingToDoCopy = { ...this.newThingToDo };
+      this.todoList.unshift(newThingToDoCopy);
     },
   },
 }).mount("#app");
