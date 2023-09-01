@@ -18,7 +18,10 @@ const app = createApp({
           done: false,
         },
       ],
-      newThingToDo: "",
+      newThingToDo: {
+        text: "Nuova cosa da fare",
+        done: false,
+      },
     };
   },
 
@@ -33,8 +36,6 @@ const app = createApp({
 
     addNewThingToDo() {
       this.todoList.unshift(this.newThingToDo);
-
-      this.newThingToDo = "";
     },
   },
 }).mount("#app");

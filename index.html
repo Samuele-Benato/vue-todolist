@@ -45,7 +45,7 @@
         <h1 class="text-center py-3">{{title}}</h1>
         <div class="input-group mb-3">
           <input
-            v-model.trim="newThingToDo"
+            v-model.trim="newThingToDo.text"
             type="text"
             class="form-control"
             placeholder="Aggiungi una cosa da fare"
@@ -76,6 +76,7 @@
             </div>
           </div>
         </div>
+        <!-- <div v-else class="card mb-3">Nessun elemento nella lista</div> -->
       </div>
     </div>
   </body>
